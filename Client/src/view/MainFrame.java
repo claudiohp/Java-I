@@ -21,6 +21,7 @@ import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
 import model.Cliente;
+
 //
 /**
  * Janela principal do sistema.
@@ -53,14 +54,14 @@ public class MainFrame extends JFrame {
 	 * Constrói os componentes da janela.
 	 */
 	private void buildComponents() {
-		buildSearchPanel();
+		buildPanel();
 		buildButtonPanel();
 	}
 
 	/**
 	 * Constrói o painel de pesquisa.
 	 */
-	private void buildSearchPanel() {
+	private void buildPanel() {
 		JPanel panel = new JPanel(new GridBagLayout());
 
 		String[] items = { "Nome", "CPF" };
@@ -69,24 +70,18 @@ public class MainFrame extends JFrame {
 
 		JTextField searchField = new JTextField(20);
 		panel.add(searchField, new GBC(1, 0).horizontal());
-
+		
 		JScrollPane scrollPane = new JScrollPane();
+		ClienteTableModel Clienttable = new ClienteTableModel();	
 		JTable table = new JTable();
+		table.setModel(Clienttable);
 		scrollPane.add(table);
 		panel.add(scrollPane, new GBC(0, 1).gridwh(2, 1).both());
 		
-
-		JTable tableModel = new JTable(new MyTableModel1());
-		tableModel.getModel().addTableModelListener(tableModel);
-		
 		add(panel, new GBC(0, 0).both());
-		
-		
-		
+
 	}
-	
-	
-	
+
 	/**
 	 * Constrói o painel de botões.
 	 */
@@ -107,9 +102,9 @@ public class MainFrame extends JFrame {
 
 		JButton deleteButton = new JButton("Excluir");
 		panel.add(deleteButton, new GBC(0, 2));
-		
+
 		add(panel, new GBC(1, 0));
-		
+
 	}
 
 	/**

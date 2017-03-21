@@ -73,6 +73,7 @@ public class AddClientDialog extends JDialog {
 		JButton save = new JButton("Salvar");
 		panel.add(save, new GBC(1, 3).right());
 		save.addActionListener(new ActionListener() {
+		
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
