@@ -1,5 +1,5 @@
 
-package view;
+package controller;
 
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
