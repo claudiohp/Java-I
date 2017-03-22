@@ -27,7 +27,7 @@ public class AddClientDialog extends JDialog {
 	 * @param mainFrame
 	 *            Janela principal.
 	 */
-	public AddClientDialog (MainFrame mainFrame) {
+	public AddClientDialog(MainFrame mainFrame) {
 		build();
 	}
 
@@ -48,7 +48,7 @@ public class AddClientDialog extends JDialog {
 		setModal(true);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setVisible(true);
-		
+
 	}
 
 	private void addbuildClient() {
@@ -73,14 +73,12 @@ public class AddClientDialog extends JDialog {
 		JButton save = new JButton("Salvar");
 		panel.add(save, new GBC(1, 3).right());
 		save.addActionListener(new ActionListener() {
-		
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
 
 				JOptionPane.showMessageDialog(save, "Salvo com sucesso.");
-				
-				
+
 			}
 		});
 

@@ -70,15 +70,14 @@ public class MainFrame extends JFrame {
 
 		JTextField searchField = new JTextField(20);
 		panel.add(searchField, new GBC(1, 0).horizontal());
-		
+
 		JScrollPane scrollPane = new JScrollPane();
-		ClienteTableModel Clienttable = new ClienteTableModel();	
+		ClienteTableModel Clienttable = new ClienteTableModel();
 		JTable table = new JTable();
 		table.setModel(Clienttable);
 		scrollPane.add(table);
 		panel.add(scrollPane, new GBC(0, 1).gridwh(2, 1).both());
 		add(panel, new GBC(0, 0).both());
-
 	}
 
 	/**
@@ -92,7 +91,7 @@ public class MainFrame extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
+
 				new AddClientDialog(MainFrame.this);
 			}
 		});
