@@ -77,7 +77,6 @@ public class MainFrame extends JFrame {
 		table.setModel(Clienttable);
 		scrollPane.add(table);
 		panel.add(scrollPane, new GBC(0, 1).gridwh(2, 1).both());
-		
 		add(panel, new GBC(0, 0).both());
 
 	}
@@ -93,6 +92,7 @@ public class MainFrame extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				
 				new AddClientDialog(MainFrame.this);
 			}
 		});
