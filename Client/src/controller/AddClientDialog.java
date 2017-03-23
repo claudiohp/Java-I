@@ -80,7 +80,6 @@ public class AddClientDialog extends JDialog {
 
 				JOptionPane.showMessageDialog(save, "Salvo com sucesso.");
 				
-				
 			}
 		});
 
