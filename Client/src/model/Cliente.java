@@ -11,6 +11,7 @@ public class Cliente extends DefaultTableModel {
 	private String nome;
 	private String cpf;
 	private String data;
+	private int count;
 
 	public Cliente() {
 		super();
@@ -42,8 +43,5 @@ public class Cliente extends DefaultTableModel {
 	public void setDate(String date) {
 		data = data;
 	}
-	
-		 
-	}
 
-
+}
