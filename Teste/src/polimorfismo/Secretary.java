@@ -31,4 +31,9 @@ public class Secretary extends Employee {
 	public float getSalary() {
 		return baseSalary + bonus;
 	}
+	
+	@Override
+	public String toString() {
+		return getName() + " " + getSalary();
+	}
 }

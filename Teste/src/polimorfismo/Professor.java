@@ -44,8 +44,7 @@ public class Professor extends Employee {
 	
 	@Override
 	public String toString() {
-		String name = "";
-		return super.getName();
-
+		return getName() + " "+ getSalary();
 	}
+	
 }
