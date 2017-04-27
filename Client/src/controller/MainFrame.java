@@ -27,7 +27,8 @@ import model.Cliente;
  * Janela principal do sistema.
  */
 public class MainFrame extends JFrame {
-
+	
+	JTable table = new JTable();
 	/**
 	 * Construtor.
 	 */
@@ -72,12 +73,18 @@ public class MainFrame extends JFrame {
 		panel.add(searchField, new GBC(1, 0).horizontal());
 
 		ClienteTableModel Clienttable = new ClienteTableModel();
-		JTable table = new JTable();
 		table.setModel(Clienttable);
 		JScrollPane scrollPane = new JScrollPane(table);
 		panel.add(scrollPane, new GBC(0, 1).gridwh(2, 1).both());
 		add(panel, new GBC(0, 0).both());
+	
 	}
+	
+	public void addClient(Cliente cliente){
+		
+		
+	}
+	
 
 	/**
 	 * Constrói o painel de botões.
@@ -102,9 +109,9 @@ public class MainFrame extends JFrame {
 		panel.add(deleteButton, new GBC(0, 2));
 
 		add(panel, new GBC(1, 0));
-
+	
 	}
-
+	
 	/**
 	 * Constrói o menu.
 	 */

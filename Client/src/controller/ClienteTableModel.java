@@ -1,7 +1,9 @@
 package controller;
 
+import java.awt.List;
 import java.util.ArrayList;
 
+import javax.swing.JTable;
 import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableModel;
 
@@ -25,6 +27,7 @@ public class ClienteTableModel extends AbstractTableModel {
 	}
 
 	public Object getValueAt(int row, int col) {
+		
 		switch (col) {
 		case 0:
 			return clientlist.get(row).getNome();
@@ -34,7 +37,28 @@ public class ClienteTableModel extends AbstractTableModel {
 			return clientlist.get(row).getDate();
 		default:
 			return null;
+
 		}
 	}
+	
+	public boolean isCellEditable(int rowIndex, int columnIndex) {
+        
+		return false;
+    }
+	
+	public Cliente getCliente(int rowIndex){
+		
+		return clientlist.get(rowIndex);
+		
+	}
+	
+	public void addClient(Cliente cliente){
+		
+		clientlist.add(cliente);
+		Object[] clientdata = {cliente.getNome(),cliente.getCpf(),cliente.getDate()};
+		
+	}
+	
+	
 	
 }

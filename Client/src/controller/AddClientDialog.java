@@ -78,7 +78,9 @@ public class AddClientDialog extends JDialog {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 
-				JOptionPane.showMessageDialog(save, "Salvo com sucesso.");
+//				JOptionPane.showMessageDialog(save, "Salvo com sucesso.");
+				
+				
 				
 			}
 		});
