@@ -1,5 +1,6 @@
 package polimorfismo;
 
+// propriedades - tipo de dados
 public class Employee {
 
 	/**
@@ -29,5 +30,5 @@ public class Employee {
 	public float getSalary() {
 		return 0;
 	}
-
+	
 }
