@@ -3,6 +3,8 @@ package controller;
 import java.awt.Dimension;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JDialog;
@@ -24,11 +26,11 @@ public class MercadoFinanca extends JFrame {
 		build();
 	}
 
-	Object[][] dados = { { "Ana Monteiro", "48 9923-7898", "ana.monteiro@gmail.com" },
-			{ "João da Silva", "48 8890-3345", "joaosilva@hotmail.com" },
-			{ "Pedro Cascaes", "48 9870-5634", "pedrinho@gmail.com" } };
+	Object[][] dados = { { "Petrobras", "10%", "11%","10%" },
+			{ "Amazon", "9%", "10%","10%" },
+			{ "Facebook", "8%", "7%","10%" } };
 
-	String[] colunas = { "Empresa", "Taxa", "Taxa Alta"};
+	String[] colunas = { "Empresa", "Taxa", "Taxa Alta","Taxa Baixa"};
 	
 	
 	private void build() {
@@ -43,7 +45,7 @@ public class MercadoFinanca extends JFrame {
 		getColumnCount();
 		buildTable();
 	}
-
+	
 	private void buildTable() {
 		panel.setLayout(new GridLayout(0, 1));
 		getColumnCount();
@@ -57,9 +59,10 @@ public class MercadoFinanca extends JFrame {
 		add(panel, new GBC(0, 0).both());
 
 	}
-
+	
 	public int getColumnCount() {
 		return colunas.length;
 	}
-
+	
+	
 }
