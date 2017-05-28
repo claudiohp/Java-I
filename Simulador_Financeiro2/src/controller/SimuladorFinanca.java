@@ -92,7 +92,7 @@ public class SimuladorFinanca extends JDialog {
 				dispose();
 			}
 		});
-
+		
 		JButton Apagar = new JButton("Apagar");
 		panel.add(Apagar, new GBC(1, 7));
 		Apagar.addActionListener(new ActionListener() {

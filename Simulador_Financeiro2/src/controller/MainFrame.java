@@ -83,7 +83,7 @@ public class MainFrame extends JFrame {
 		});
 
 		JMenuItem sairMenuItem = new JMenuItem("Sair");
-		ajudaMenu.add(sairMenuItem);
+		menuBar.add(sairMenuItem);
 		sairMenuItem.addActionListener(new ActionListener() {
 
 			@Override
