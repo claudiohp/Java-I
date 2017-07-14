@@ -12,6 +12,10 @@ public class Curso {
 	private String observacoes;
 	private String tipo;
 	
+	public Curso(String nome){
+		this.nome = nome;
+	}
+	
 	public Curso(int codigo, String nome, String cargaHoraria, double taxaMatricula, double valorCurso, int parcelas,
 			double valorTotal, String observacoes, String tipo) {
 		super();

@@ -12,57 +12,57 @@ import view.ClientTableModel;
 
 public class ClientDao {
 
-	public static void insert(Client client) {
+//	public static void insert(Client client) {
+//
+//		Connection con = ConnectionFactory.getConnection();
+//
+//		try {
+//			PreparedStatement command = con.prepareStatement("INSERT INTO client VALUES (?, ? )");
+//			command.setString(1, client.getCpf());
+//			command.setString(2, client.getName());
+//			command.executeUpdate();
+//			command.close();
+//			con.close();
+//
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//		}
+//	}
 
-		Connection con = ConnectionFactory.getConnection();
+//	public static void update(Client client) {
+//
+//		Connection con = ConnectionFactory.getConnection();
+//
+//		try {
+//			PreparedStatement command = con.prepareStatement("UPDATE client SET nome = ? WHERE cpf = ?");
+//			command.setString(1, client.getName());
+//			command.setString(2, client.getCpf());
+//			command.executeUpdate();
+//			command.close();
+//			con.close();
+//
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//		}
+//
+//	}
 
-		try {
-			PreparedStatement command = con.prepareStatement("INSERT INTO client VALUES (?, ? )");
-			command.setString(1, client.getCpf());
-			command.setString(2, client.getName());
-			command.executeUpdate();
-			command.close();
-			con.close();
-
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-	}
-
-	public static void update(Client client) {
-
-		Connection con = ConnectionFactory.getConnection();
-
-		try {
-			PreparedStatement command = con.prepareStatement("UPDATE client SET nome = ? WHERE cpf = ?");
-			command.setString(1, client.getName());
-			command.setString(2, client.getCpf());
-			command.executeUpdate();
-			command.close();
-			con.close();
-
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-
-	}
-
-	public static void delete(Client client) {
-
-		Connection con = ConnectionFactory.getConnection();
-
-		try {
-
-			PreparedStatement command = con.prepareStatement("DELETE FROM client WHERE cpf = ?");
-			command.setString(1, client.getCpf());
-			command.executeUpdate();
-			command.close();
-			con.close();
-
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-	}
+//	public static void delete(Client client) {
+//
+//		Connection con = ConnectionFactory.getConnection();
+//
+//		try {
+//
+//			PreparedStatement command = con.prepareStatement("DELETE FROM client WHERE cpf = ?");
+//			command.setString(1, client.getCpf());
+//			command.executeUpdate();
+//			command.close();
+//			con.close();
+//
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//		}
+//	}
 
 	public static ArrayList<Client> select(Client client) {
 
@@ -89,9 +89,10 @@ public class ClientDao {
 
 	public static void main(String[] args) {
 
-		insert(new Client("Claudio", "1111222333", null));
-		update(new Client("Joao", "1111222333", null));
-		delete(new Client(null, "1111222333", null));
-		select(new Client("Joao", "1111222333", null));
+//		insert(new Client("Claudio", "1111222333", null));
+//		insert(new Client("Joao", "2224444333", null));
+//		update(new Client("Joao", "1111222333", null));
+//		delete(new Client(null, "22233344", null));
+		select(new Client("Claudio", "1111222333", null));
 	}
 }
