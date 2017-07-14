@@ -34,7 +34,7 @@ public class ClientDao {
 		Connection con = ConnectionFactory.getConnection();
 
 		try {
-			PreparedStatement command = con.prepareStatement("UPDATE client SET name = ? WHERE cpf = ?");
+			PreparedStatement command = con.prepareStatement("UPDATE client SET nome = ? WHERE cpf = ?");
 			command.setString(1, client.getName());
 			command.setString(2, client.getCpf());
 			command.executeUpdate();

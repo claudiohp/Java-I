@@ -13,7 +13,8 @@ public class Client {
 
 	/** Data de nascimento do cliente. */
 	private String birthday;
-
+	
+	
 	/**
 	 * Construtor.
 	 * 
