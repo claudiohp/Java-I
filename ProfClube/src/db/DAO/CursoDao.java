@@ -43,8 +43,8 @@ public class CursoDao {
 
 		try {
 
-			PreparedStatement command = con.prepareStatement("DELETE FROM cursos WHERE nome = ?");
-			command.setString(1, curso.getNome());
+			PreparedStatement command = con.prepareStatement("DELETE FROM cursos WHERE IDCURSOS = ?");
+			command.setInt(1, curso.getCodigo());
 			command.executeUpdate();
 			command.close();
 			con.close();
@@ -53,29 +53,4 @@ public class CursoDao {
 			e.printStackTrace();
 		}
 	}
-	
-//	public static ArrayList<Curso> select(Curso curso) {
-//
-//		ArrayList<Curso> cursoList = new ArrayList<Curso>();
-//		Connection con = ConnectionFactory.getConnection();
-//
-//		try {
-//
-//			PreparedStatement command = con.prepareStatement("SELECT * FROM cursos");
-//			ResultSet rs = command.executeQuery();
-//
-//			while (rs.next()) {
-//				cursoList.add(new Curso("Nome: " +curso.getNome()));
-//			}
-//			rs.close();
-//			command.close();
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//		}
-//
-//		return cursoList;
-//
-//	}
-
-	
 }

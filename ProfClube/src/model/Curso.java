@@ -1,5 +1,8 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Curso {
 	
 	private int codigo;
@@ -12,8 +15,12 @@ public class Curso {
 	private String observacoes;
 	private String tipo;
 	
-	public Curso(String nome){
-		this.nome = nome;
+	public Curso(){
+		
+	}
+	
+	public Curso(int codigo){
+		this.codigo = codigo;
 	}
 	
 	public Curso(int codigo, String nome, String cargaHoraria, double taxaMatricula, double valorCurso, int parcelas,
@@ -101,6 +108,5 @@ public class Curso {
 	public void setObservacoes(String observacoes) {
 		this.observacoes = observacoes;
 	}
-	
 	
 }

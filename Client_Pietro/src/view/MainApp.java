@@ -1,6 +1,6 @@
-package controller;
+package view;
 
-import view.MainFrame;
+import controller.MainFrame;
 
 public class MainApp {
 	

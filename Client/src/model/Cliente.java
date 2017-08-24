@@ -12,7 +12,10 @@ public class Cliente extends DefaultTableModel {
 	private String cpf;
 	private String data;
 	private int count;
-
+	
+	/**
+	 * Classe cliente com seus atributos.
+	 */
 	public Cliente() {
 		super();
 		this.nome = nome;
