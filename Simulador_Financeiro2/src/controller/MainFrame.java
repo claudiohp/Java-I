@@ -34,7 +34,7 @@ public class MainFrame extends JFrame {
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setVisible(true);
-		setIconImage();
+//		setIconImage();
 		
 
 	}
@@ -140,4 +140,5 @@ public class MainFrame extends JFrame {
 		ImageIcon icon = new ImageIcon(iconimage);
 		setIconImage(icon.getImage());
 	}
+	
 }
