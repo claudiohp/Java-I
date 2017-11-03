@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence">
 
-	<persistence-unit name="registerdb">
+	<persistence-unit name="hotelaria">
 	
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-		<class>model.Cliente</class>
 		<class>model.Hospedagem</class>
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>

@@ -1,5 +1,6 @@
 package model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,16 +12,37 @@ import javax.persistence.Table;
 public class Hospedagem {
 	
 	@Id
-	@GeneratedValue (strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id_hospedagem;
+	
+	@Column
+	private String nome_cliente;
+	
+	@Column
 	private int qtd_hospede;
+	
+	@Column
 	private String checkin;
+	
+	@Column
 	private String checkout;
+	
+	@Column
 	private int qtd_noites;
+	
+	@Column
 	private String tipo_uh;
+	
+	@Column
 	private double valor_uh;
+	
+	@Column
 	private double gasto_extra;
+	
+	@Column
 	private String mes_checkin;
+	
+	@Column
 	private String mes_checkout;
 
 	public int getId_hospedagem() {
@@ -29,6 +51,14 @@ public class Hospedagem {
 
 	public void setId_hospedagem(int id_hospedagem) {
 		this.id_hospedagem = id_hospedagem;
+	}
+
+	public String getNome_cliente() {
+		return nome_cliente;
+	}
+
+	public void setNome_cliente(String nome_cliente) {
+		this.nome_cliente = nome_cliente;
 	}
 
 	public int getQtd_hospede() {
