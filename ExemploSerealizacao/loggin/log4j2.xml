@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration>
+
+	<Appenders>
+	
+		<Console name="console" target="SYSTEM_OUT">
+			<PatternLayout pattern="p- %d{dd-MM-yyyy HH:mm:ss} [%t] %M- %msg%n" />
+		</Console>
+		<RollingFile name="file" fileName="c:/serializacao/meulog.log"
+			filePattern="c:/serializacao/meulog-%d{ddMMyyyyHHmmss}.log">
+			<PatternLayout pattern="p- %d{dd-MM-yyyy HH:mm:ss} [%t] %M- %msg%n" />
+			<Policies>
+				<OnStartupTriggeringPolicy/>
+			</Policies>
+		</RollingFile>
+
+	</Appenders>
+
+	<Loggers>
+	
+		<Root level="all">
+			<AppenderRef ref="console" level="all" />
+			<AppenderRef ref="file" level="all" />			
+		</Root>
+	
+	</Loggers>
+</Configuration>
